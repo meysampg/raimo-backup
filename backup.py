@@ -64,7 +64,7 @@ args = argumentParser.parse_args()
 
 originAddress = args.originFolder if type(args.originFolder) is str else args.originFolder[0]
 if args.timeAppend:
-    originAddress += '/' + str(datetime.datetime.utcnow())
+    originAddress += '/' + str(datetime.datetime.now())
     if (not os.path.exists(originAddress)):
         os.makedirs(originAddress)
 
